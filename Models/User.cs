@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace YourProjectName.Models
+namespace noted_database.Models
 {
     public class User
     {
