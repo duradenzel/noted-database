@@ -19,7 +19,6 @@ namespace noted_database.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configure entity relationships and other model configurations here
         }
     }
 }
