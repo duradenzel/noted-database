@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using noted_database.Data;
+using noted_database.Data.Repositories;
+using noted_database.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,10 @@ builder.Services.AddCors(options =>
             });
     });
 
+ builder.Services.AddScoped<UserRepository>();
+    builder.Services.AddScoped<CampaignRepository>();
+    builder.Services.AddScoped<CampaignService>();
+
 var configuration = new ConfigurationBuilder()
     .SetBasePath(builder.Environment.ContentRootPath)
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -31,6 +37,7 @@ var configuration = new ConfigurationBuilder()
 var connectionString = configuration.GetConnectionString("DbContext");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
 
 var app = builder.Build();
 

@@ -2,40 +2,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using noted_database.Data;
 using noted_database.Models;
-namespace noted_database.Controllers;
+using noted_database.Services;
+namespace noted_database.Controllers{
 
-[ApiController]
-[Route("api/campaign")]
-public class CampaignController : ControllerBase
-{
-    private readonly ApplicationDbContext _dbContext;
-
-    public CampaignController(ApplicationDbContext dbcontext)
+ [ApiController]
+    [Route("campaigns")]
+    public class CampaignController : ControllerBase
     {
-        _dbContext = dbcontext;
-    }
+        private readonly CampaignService _campaignService;
 
-   [HttpGet("get")]
-    public async Task<IActionResult> GetCampaigns([FromQuery] string email)
-    {
-        var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
-        if (user == null)
+        public CampaignController(CampaignService campaignService)
         {
-            user = new User { Email = email };
-            _dbContext.Users.Add(user);
-            await _dbContext.SaveChangesAsync();
+            _campaignService = campaignService;
         }
 
-        var userParticipations = await _dbContext.CampaignParticipants
-            .Where(cp => cp.UserId == user.UserId)
-            .Select(cp => cp.CampaignId)
-            .ToListAsync();
-
-        var campaigns = await _dbContext.Campaigns
-            .Where(c => userParticipations.Contains(c.CampaignId))
-            .ToListAsync();
-
-        return Ok(new { Campaigns = campaigns });
+        [HttpGet]
+        public async Task<IActionResult> GetCampaigns([FromQuery] string email)
+        {
+            var campaigns = await _campaignService.GetCampaignsByEmailAsync(email);
+            return Ok(new { Campaigns = campaigns });
+        }
     }
 
 }
