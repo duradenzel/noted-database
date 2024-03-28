@@ -1,5 +1,8 @@
 using noted_database.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.HttpResults;
+using System.Net;
 
 namespace noted_database.Data.Repositories
 {
@@ -12,7 +15,7 @@ namespace noted_database.Data.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<List<Campaign>> GetCampaignsByParticipantIdAsync(int userId)
+        public async Task<List<Campaign>> GetCampaignsByParticipantId(int userId)
         {
             var campaignIds = await _dbContext.CampaignParticipants
                 .Where(cp => cp.UserId == userId)
@@ -23,5 +26,36 @@ namespace noted_database.Data.Repositories
                 .Where(c => campaignIds.Contains(c.CampaignId))
                 .ToListAsync();
         }
+      
+        public async Task<bool> InsertCampaign(Campaign campaign)
+        {
+            using (var transaction = _dbContext.Database.BeginTransaction())
+            {
+                try
+                {
+                    _dbContext.Campaigns.Add(campaign);
+                    await _dbContext.SaveChangesAsync();
+
+                    CampaignParticipant dmParticipant = new CampaignParticipant
+                    {
+                        CampaignId = campaign.CampaignId,
+                        UserId = campaign.DmId,
+                        IsDm = true
+                    };
+
+                    _dbContext.CampaignParticipants.Add(dmParticipant);
+                    await _dbContext.SaveChangesAsync();
+
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    return false;
+                }
+            }
+        }
+
     }
 }

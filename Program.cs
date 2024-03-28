@@ -24,9 +24,11 @@ builder.Services.AddCors(options =>
             });
     });
 
- builder.Services.AddScoped<UserRepository>();
-    builder.Services.AddScoped<CampaignRepository>();
-    builder.Services.AddScoped<CampaignService>();
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<CampaignRepository>();
+builder.Services.AddScoped<CampaignService>();
+builder.Services.AddScoped<UserService>();
+
 
 var configuration = new ConfigurationBuilder()
     .SetBasePath(builder.Environment.ContentRootPath)
