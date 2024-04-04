@@ -94,5 +94,31 @@ namespace noted_database.Data.Repositories
             }
         }
 
+        public async Task<bool> DeleteCampaign(int id)
+        {
+            try
+            {
+                
+                var existingCampaign = await _dbContext.Campaigns.FindAsync(id);
+
+                if (existingCampaign == null)
+                {
+                    return false; 
+                }
+
+              
+                _dbContext.Campaigns.Remove(existingCampaign);
+                await _dbContext.SaveChangesAsync();
+
+                return true; 
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("An error occurred while deleting the campaign: " + ex.Message);
+                return false; 
+            }
+        }
+
     }
 }

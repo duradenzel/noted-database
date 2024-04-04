@@ -60,6 +60,21 @@ namespace noted_database.Controllers{
             return Ok();
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCampaign(int id)
+        {
+            var result = await _campaignService.DeleteCampaign(id);
+
+            if (result)
+            {
+                return Ok(); 
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
     }
 
 }

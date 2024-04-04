@@ -40,6 +40,9 @@ namespace noted_database.Services
         public async Task<bool> UpdateCampaign(Campaign campaign){
             return await _campaignRepository.UpdateCampaign(campaign);
         }
+         public async Task<bool> DeleteCampaign(int id){
+            return await _campaignRepository.DeleteCampaign(id);
+        }
 
         
     }
