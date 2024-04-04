@@ -6,7 +6,7 @@ using noted_database.Models;
 using noted_database.Services;
 namespace noted_database.Controllers{
 
- [ApiController]
+    [ApiController]
     [Route("campaigns")]
     public class CampaignController : ControllerBase
     {
@@ -26,18 +26,37 @@ namespace noted_database.Controllers{
             return Ok(new { Campaigns = campaigns });
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCampaign(int id)
+        {
+            var campaign = await _campaignService.GetCampaignById(id);
+            if (campaign == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(campaign);
+        }
+
         [HttpPost]
         public async Task<IActionResult> InsertCampaign([FromBody] Campaign campaign, [FromQuery] string email)
         {
-            Debug.WriteLine("Received Email: " + email);
-            Debug.WriteLine("Received Campaign title: " +campaign.Title);
-
-
             var user = await _userService.GetUserByEmail(email);
-             if(user.UserId != null){
+             if(user != null){
                  campaign.DmId = user.UserId;
                await _campaignService.InsertCampaign(campaign);
              }
+            return Ok();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCampaign(int id, [FromBody] Campaign campaign)
+        {
+            var existingCampaign = await _campaignService.GetCampaignById(id); 
+            if (existingCampaign != null){
+                await _campaignService.UpdateCampaign(campaign);
+                
+            }
             return Ok();
         }
 

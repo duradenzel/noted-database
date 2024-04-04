@@ -27,9 +27,18 @@ namespace noted_database.Services
             return await _campaignRepository.GetCampaignsByParticipantId(user.UserId);
         }
 
+         public async Task<Campaign> GetCampaignById(int id)
+        {
+            return await _campaignRepository.GetCampaignById(id);
+        }
+
         public async Task<bool> InsertCampaign(Campaign campaign)
         {
           return await _campaignRepository.InsertCampaign(campaign);
+        }
+
+        public async Task<bool> UpdateCampaign(Campaign campaign){
+            return await _campaignRepository.UpdateCampaign(campaign);
         }
 
         

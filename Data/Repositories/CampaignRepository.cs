@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System.Net;
+using System.Diagnostics;
 
 namespace noted_database.Data.Repositories
 {
@@ -25,6 +26,11 @@ namespace noted_database.Data.Repositories
             return await _dbContext.Campaigns
                 .Where(c => campaignIds.Contains(c.CampaignId))
                 .ToListAsync();
+        }
+
+         public async Task<Campaign> GetCampaignById(int id)
+        {
+            return await _dbContext.Campaigns.FirstOrDefaultAsync(c => c.CampaignId == id);
         }
       
         public async Task<bool> InsertCampaign(Campaign campaign)
@@ -54,6 +60,37 @@ namespace noted_database.Data.Repositories
                     transaction.Rollback();
                     return false;
                 }
+            }
+        }
+
+       public async Task<bool> UpdateCampaign(Campaign campaign)
+        {
+            try
+            {
+                var existingCampaign = await _dbContext.Campaigns.FirstOrDefaultAsync(c => c.CampaignId == campaign.CampaignId);
+
+                if (existingCampaign == null)
+                {
+                    return false; 
+                }
+
+                existingCampaign.Title = campaign.Title;
+                existingCampaign.Description = campaign.Description;
+                existingCampaign.MaxPlayers = campaign.MaxPlayers;
+
+                await _dbContext.SaveChangesAsync();
+                
+                return true; 
+            }
+            catch (DbUpdateException ex)
+            {
+                Console.WriteLine("Database update error: " + ex.Message);
+                return false; 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An unexpected error occurred: " + ex.Message);
+                return false; 
             }
         }
 
