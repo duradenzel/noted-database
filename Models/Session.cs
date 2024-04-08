@@ -11,6 +11,8 @@ namespace noted_database.Models{
 
         public DateTime Date { get; set; }
 
+        public string Title { get; set;}
+
         public string Summary { get; set; }
     }
 }

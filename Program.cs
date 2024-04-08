@@ -24,10 +24,12 @@ builder.Services.AddCors(options =>
             });
     });
 
-builder.Services.AddScoped<UserRepository>();
-builder.Services.AddScoped<CampaignRepository>();
-builder.Services.AddScoped<CampaignService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<CampaignService>();
+builder.Services.AddScoped<CampaignRepository>();
+builder.Services.AddScoped<SessionService>();
+builder.Services.AddScoped<SessionRepository>();
 
 
 var configuration = new ConfigurationBuilder()

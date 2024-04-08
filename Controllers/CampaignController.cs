@@ -38,6 +38,7 @@ namespace noted_database.Controllers{
             return Ok(campaign);
         }
 
+       
         [HttpPost]
         public async Task<IActionResult> InsertCampaign([FromBody] Campaign campaign, [FromQuery] string email)
         {
