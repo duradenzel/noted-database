@@ -7,6 +7,8 @@ using Microsoft.Extensions.Hosting;
 using noted_database.Data;
 using noted_database.Data.Repositories;
 using noted_database.Services;
+using noted_database.Hubs;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,15 +16,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
-    {
-        options.AddPolicy("AllowSpecificOrigins",
-            builder =>
-            {
-                builder.WithOrigins("http://localhost:5173")
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
-            });
-    });
+{
+    options.AddDefaultPolicy(
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+        });
+});
 
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<UserRepository>();
@@ -30,7 +32,7 @@ builder.Services.AddScoped<CampaignService>();
 builder.Services.AddScoped<CampaignRepository>();
 builder.Services.AddScoped<SessionService>();
 builder.Services.AddScoped<SessionRepository>();
-
+builder.Services.AddSignalR();
 
 var configuration = new ConfigurationBuilder()
     .SetBasePath(builder.Environment.ContentRootPath)
@@ -50,12 +52,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
-
+ app.UseCors(x => x
+           .AllowAnyMethod()
+           .AllowAnyHeader()
+           .SetIsOriginAllowed(origin => true)
+           .AllowCredentials());
+app.MapHub<NotificationHub>("/NotificationHub");
 app.UseAuthorization();
-
 app.MapControllers();
-app.UseCors("AllowSpecificOrigins");
 
 app.Run();
