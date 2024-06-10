@@ -43,7 +43,8 @@ namespace noted_database.Services
         }
 
         public async Task<bool> UpdateCampaign(Campaign campaign){
-            await NotifyUsersAsync("Campaign has been updated");
+
+            await NotifyUsersAsync("Your campaign '" + campaign.Title + "' has been updated");
             return await _campaignRepository.UpdateCampaign(campaign);
         }
          public async Task<bool> DeleteCampaign(int id){
