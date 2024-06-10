@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t+5Eu05ou1g=",
+  "dgSpecHash": "gsKD7+/M2bQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database.csproj",
+  "projectFilePath": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-backend\\noted-database\\noted-database.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Huijb\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",
     "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.aspnet.signalr\\2.4.3\\microsoft.aspnet.signalr.2.4.3.nupkg.sha512",
@@ -47,10 +47,10 @@
     "C:\\Users\\Huijb\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\Huijb\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Huijb\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
-    "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512",
-    "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.19\\microsoft.netcore.app.host.win-x64.7.0.19.nupkg.sha512",
     "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
-    "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512"
+    "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.19\\microsoft.netcore.app.host.win-x64.7.0.19.nupkg.sha512"
   ],
   "logs": [
     {

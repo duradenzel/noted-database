@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database.csproj": {}
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-backend\\noted-database\\noted-database.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database.csproj": {
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-backend\\noted-database\\noted-database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database.csproj",
+        "projectUniqueName": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-backend\\noted-database\\noted-database.csproj",
         "projectName": "noted-database",
-        "projectPath": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database.csproj",
+        "projectPath": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-backend\\noted-database\\noted-database.csproj",
         "packagesPath": "C:\\Users\\Huijb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\obj\\",
+        "outputPath": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-backend\\noted-database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Huijb\\AppData\\Roaming\\NuGet\\NuGet.Config",
