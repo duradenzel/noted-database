@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace noted_database.Data.Repositories
 {
-    public class CampaignRepository
+    public class CampaignRepository : ICampaignRepository
     {
         private readonly ApplicationDbContext _dbContext;
 

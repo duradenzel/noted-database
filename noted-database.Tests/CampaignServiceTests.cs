@@ -5,8 +5,6 @@ using noted_database.Data.Repositories;
 using noted_database.Hubs;
 using noted_database.Models;
 using noted_database.Services;
-using noted_database.noted_database.Services.Interfaces;
-
 using Xunit;
 using Microsoft.AspNetCore.SignalR;
 
@@ -15,14 +13,14 @@ namespace noted_database.Tests
     public class CampaignServiceTests
     {
         private readonly Mock<IUserRepository> _mockUserRepository;
-        private readonly Mock<CampaignRepository> _mockCampaignRepository;
+        private readonly Mock<ICampaignRepository> _mockCampaignRepository;
         private readonly Mock<IHubContext<NotificationHub>> _mockHubContext;
         private readonly CampaignService _campaignService;
 
         public CampaignServiceTests()
         {
-            _mockUserRepository = new Mock<UserRepository>();
-            _mockCampaignRepository = new Mock<CampaignRepository>();
+            _mockUserRepository = new Mock<IUserRepository>();
+            _mockCampaignRepository = new Mock<ICampaignRepository>();
             _mockHubContext = new Mock<IHubContext<NotificationHub>>();
             _campaignService = new CampaignService(
                 _mockUserRepository.Object,
@@ -35,7 +33,7 @@ namespace noted_database.Tests
         public async Task GetCampaignsByEmail_UserExists_ReturnsCampaigns()
         {
             // Arrange
-            var email = "test@example.com";
+            var email = "duradenzel13@gmail.com";
             var user = new User { UserId = 1, Email = email };
             var campaigns = new List<Campaign> { new Campaign { CampaignId = 1, Title = "Test Campaign" } };
 

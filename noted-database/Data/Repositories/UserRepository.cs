@@ -1,10 +1,10 @@
 using noted_database.Models;
-
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace noted_database.Data.Repositories
 {
-    public class UserRepository: IUserRepository;
+    public class UserRepository : IUserRepository
     {
         private readonly ApplicationDbContext _dbContext;
 
@@ -24,5 +24,4 @@ namespace noted_database.Data.Repositories
             await _dbContext.SaveChangesAsync();
         }
     }
-
 }

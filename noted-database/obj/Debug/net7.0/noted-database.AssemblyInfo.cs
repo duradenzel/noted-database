@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("noted-database")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b3265f1139132b6e7f85a6de1dacc4a54491ca3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cdce66ecf164fd805e47abb5c9fc7141ce18c25")]
 [assembly: System.Reflection.AssemblyProductAttribute("noted-database")]
 [assembly: System.Reflection.AssemblyTitleAttribute("noted-database")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
