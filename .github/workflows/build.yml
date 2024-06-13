@@ -50,8 +50,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
+        # run: |
+        #   .\.sonar\scanner\dotnet-sonarscanner begin /k:"duradenzel_noted-database" /o:"duradenzel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=/*/.xml
+        #   dotnet build --no-incremental
+        #   coverlet .\noted-database.Tests\bin\Debug\net8.0\noted-database.Tests.dll --target "dotnet" --targetargs "test --no-build" -f=opencover
+        #   .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"duradenzel_noted-database" /o:"duradenzel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=/*/.xml
-          dotnet build --no-incremental
-          coverlet .\noted-database.Tests\bin\Debug\net8.0\noted-database.Tests.dll --target "dotnet" --targetargs "test --no-build" -f=opencover
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"duradenzel_noted-database" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url=""https://sonarcloud.io"" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+          dotnet build
+          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
