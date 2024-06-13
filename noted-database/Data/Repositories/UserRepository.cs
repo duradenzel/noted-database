@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace noted_database.Data.Repositories
 {
-    public class UserRepository
+    public class UserRepository: IUserRepository;
     {
         private readonly ApplicationDbContext _dbContext;
 

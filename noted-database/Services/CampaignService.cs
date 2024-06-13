@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using noted_database.Data.Repositories;
 using noted_database.Hubs;
 using noted_database.Models;
+using noted_database.Services.Interfaces;
 
 namespace noted_database.Services
 {
-    public class CampaignService
+    public class CampaignService : CampaignService
     {
         private readonly UserRepository _userRepository;
         private readonly CampaignRepository _campaignRepository;

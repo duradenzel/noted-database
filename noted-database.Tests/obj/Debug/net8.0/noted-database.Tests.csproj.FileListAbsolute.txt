@@ -246,3 +246,5 @@ C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\no
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Tests\obj\Debug\net8.0\noted-database.Tests.pdb
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Tests\obj\Debug\net8.0\noted-database.Tests.genruntimeconfig.cache
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Tests\obj\Debug\net8.0\ref\noted-database.Tests.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Tests\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Tests\bin\Debug\net8.0\Moq.dll
