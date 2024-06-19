@@ -18,6 +18,7 @@ namespace noted_database.Services
             _userRepository = userRepository;
             _campaignRepository = campaignRepository;
             _hubContext = hubContext;
+           
         }
 
         public async Task<List<Campaign>> GetCampaignsByEmail(string email)
@@ -27,6 +28,7 @@ namespace noted_database.Services
             {
                 user = new User { Email = email };
                 await _userRepository.AddUserAsync(user);
+                return new List<Campaign>();
             }
 
             return await _campaignRepository.GetCampaignsByParticipantId(user.UserId);
@@ -42,10 +44,14 @@ namespace noted_database.Services
             return await _campaignRepository.InsertCampaign(campaign);
         }
 
-        public async Task<bool> UpdateCampaign(Campaign campaign)
+       public async Task<bool> UpdateCampaign(Campaign campaign)
         {
-            await NotifyUsersAsync("Your campaign '" + campaign.Title + "' has been updated");
-            return await _campaignRepository.UpdateCampaign(campaign);
+            var updateResult = await _campaignRepository.UpdateCampaign(campaign);
+            if (updateResult)
+            {
+                await NotifyUsersAsync("Your campaign '" + campaign.Title + "' has been updated");
+            }
+            return updateResult;
         }
 
         public async Task<bool> DeleteCampaign(int id)
@@ -55,7 +61,7 @@ namespace noted_database.Services
 
         public async Task NotifyUsersAsync(string message)
         {
-            await _hubContext.Clients.All.SendAsync("ReceiveNotification", message);
+            await _hubContext.Clients.All.SendAsync("ReceiveMessage", message);
         }
     }
 }

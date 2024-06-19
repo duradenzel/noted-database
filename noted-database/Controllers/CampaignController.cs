@@ -10,10 +10,10 @@ namespace noted_database.Controllers{
     [Route("campaigns")]
     public class CampaignController : ControllerBase
     {
-        private readonly CampaignService _campaignService;
+        private readonly ICampaignService _campaignService;
         private readonly UserService _userService;
 
-        public CampaignController(CampaignService campaignService, UserService userService)
+        public CampaignController(ICampaignService campaignService, UserService userService)
         {
             _campaignService = campaignService;
             _userService = userService;

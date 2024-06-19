@@ -11,8 +11,8 @@ namespace noted_database.Controllers{
     public class SessionController : ControllerBase
     {
         private readonly SessionService _sessionService;
-        private readonly CampaignService _campaignService;
-        public SessionController(SessionService sessionService, CampaignService campaignService)
+        private readonly ICampaignService _campaignService;
+        public SessionController(SessionService sessionService, ICampaignService campaignService)
         {
             _sessionService = sessionService;
             _campaignService = campaignService;

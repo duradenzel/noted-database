@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+4cf17bBd8s=",
+  "dgSpecHash": "tblbQWwyWr8=",
   "success": true,
   "projectFilePath": "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database.Tests\\noted-database.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Huijb\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Huijb\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
+    "C:\\Users\\Huijb\\.nuget\\packages\\coverlet.msbuild\\6.0.2\\coverlet.msbuild.6.0.2.nupkg.sha512",
     "C:\\Users\\Huijb\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",
     "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.aspnet.signalr\\2.4.3\\microsoft.aspnet.signalr.2.4.3.nupkg.sha512",
     "C:\\Users\\Huijb\\.nuget\\packages\\microsoft.aspnet.signalr.core\\2.4.3\\microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512",

@@ -5,10 +5,10 @@ namespace noted_database.Services
 {
     public class UserService
     {
-        private readonly UserRepository _userRepository;
-        private readonly CampaignRepository _campaignRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly ICampaignRepository _campaignRepository;
 
-        public UserService(UserRepository userRepository, CampaignRepository campaignRepository)
+        public UserService(IUserRepository userRepository, ICampaignRepository campaignRepository)
         {
             _userRepository = userRepository;
             _campaignRepository = campaignRepository;

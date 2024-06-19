@@ -1,0 +1,1085 @@
+{
+  "noted-database.dll": {
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Program.cs": {
+      "Program": {
+        "System.Void Program::<Main>$(System.String[])": {
+          "Lines": {
+            "13": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0
+          },
+          "Branches": [
+            {
+              "Line": 50,
+              "Offset": 286,
+              "EndOffset": 288,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 286,
+              "EndOffset": 306,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Services\\CampaignService.cs": {
+      "noted_database.Services.CampaignService": {
+        "System.Void noted_database.Services.CampaignService::.ctor(noted_database.Data.Repositories.IUserRepository,noted_database.Data.Repositories.ICampaignRepository,Microsoft.AspNetCore.SignalR.IHubContext`1<noted_database.Hubs.NotificationHub>)": {
+          "Lines": {
+            "16": 11,
+            "17": 11,
+            "18": 11,
+            "19": 11,
+            "20": 11,
+            "22": 11
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.CampaignService/<DeleteCampaign>d__8": {
+        "System.Void noted_database.Services.CampaignService/<DeleteCampaign>d__8::MoveNext()": {
+          "Lines": {
+            "58": 2,
+            "59": 2,
+            "60": 2
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.CampaignService/<GetCampaignById>d__5": {
+        "System.Void noted_database.Services.CampaignService/<GetCampaignById>d__5::MoveNext()": {
+          "Lines": {
+            "38": 2,
+            "39": 2,
+            "40": 2
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.CampaignService/<GetCampaignsByEmail>d__4": {
+        "System.Void noted_database.Services.CampaignService/<GetCampaignsByEmail>d__4::MoveNext()": {
+          "Lines": {
+            "25": 3,
+            "26": 3,
+            "27": 3,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "34": 2,
+            "35": 3
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 189,
+              "EndOffset": 194,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 27,
+              "Offset": 189,
+              "EndOffset": 345,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      },
+      "noted_database.Services.CampaignService/<InsertCampaign>d__6": {
+        "System.Void noted_database.Services.CampaignService/<InsertCampaign>d__6::MoveNext()": {
+          "Lines": {
+            "43": 2,
+            "44": 2,
+            "45": 2
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.CampaignService/<NotifyUsersAsync>d__9": {
+        "System.Void noted_database.Services.CampaignService/<NotifyUsersAsync>d__9::MoveNext()": {
+          "Lines": {
+            "63": 1,
+            "64": 1,
+            "65": 1
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.CampaignService/<UpdateCampaign>d__7": {
+        "System.Void noted_database.Services.CampaignService/<UpdateCampaign>d__7::MoveNext()": {
+          "Lines": {
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 2,
+            "55": 2
+          },
+          "Branches": [
+            {
+              "Line": 50,
+              "Offset": 165,
+              "EndOffset": 170,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 50,
+              "Offset": 165,
+              "EndOffset": 299,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Services\\SessionService.cs": {
+      "noted_database.Services.SessionService": {
+        "System.Void noted_database.Services.SessionService::.ctor(noted_database.Data.Repositories.UserRepository,noted_database.Data.Repositories.SessionRepository)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.SessionService/<DeleteSession>d__7": {
+        "System.Void noted_database.Services.SessionService/<DeleteSession>d__7::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.SessionService/<GetSessionById>d__4": {
+        "System.Void noted_database.Services.SessionService/<GetSessionById>d__4::MoveNext()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.SessionService/<GetSessionsByCampaignId>d__3": {
+        "System.Void noted_database.Services.SessionService/<GetSessionsByCampaignId>d__3::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.SessionService/<InsertSession>d__5": {
+        "System.Void noted_database.Services.SessionService/<InsertSession>d__5::MoveNext()": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.SessionService/<UpdateSession>d__6": {
+        "System.Void noted_database.Services.SessionService/<UpdateSession>d__6::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Services\\UserService.cs": {
+      "noted_database.Services.UserService": {
+        "System.Void noted_database.Services.UserService::.ctor(noted_database.Data.Repositories.UserRepository,noted_database.Data.Repositories.CampaignRepository)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Services.UserService/<GetUserByEmail>d__3": {
+        "System.Void noted_database.Services.UserService/<GetUserByEmail>d__3::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Models\\Campaign.cs": {
+      "noted_database.Models.Campaign": {
+        "System.Int32 noted_database.Models.Campaign::get_CampaignId()": {
+          "Lines": {
+            "8": 6
+          },
+          "Branches": []
+        },
+        "System.String noted_database.Models.Campaign::get_Title()": {
+          "Lines": {
+            "11": 7
+          },
+          "Branches": []
+        },
+        "System.String noted_database.Models.Campaign::get_Description()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 noted_database.Models.Campaign::get_MaxPlayers()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 noted_database.Models.Campaign::get_DmId()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Models\\CampaignParticipant.cs": {
+      "noted_database.Models.CampaignParticipant": {
+        "System.Int32 noted_database.Models.CampaignParticipant::get_ParticipantId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 noted_database.Models.CampaignParticipant::get_CampaignId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 noted_database.Models.CampaignParticipant::get_UserId()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean noted_database.Models.CampaignParticipant::get_IsDm()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "noted_database.Models.Campaign noted_database.Models.CampaignParticipant::get_Campaign()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "noted_database.Models.User noted_database.Models.CampaignParticipant::get_User()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Models\\Character.cs": {
+      "noted_database.Models.Character": {
+        "System.Int32 noted_database.Models.Character::get_CharacterId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String noted_database.Models.Character::get_CharacterName()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 noted_database.Models.Character::get_UserId()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Models\\Session.cs": {
+      "noted_database.Models.Session": {
+        "System.Int32 noted_database.Models.Session::get_SessionId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 noted_database.Models.Session::get_CampaignId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime noted_database.Models.Session::get_Date()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String noted_database.Models.Session::get_Title()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String noted_database.Models.Session::get_Summary()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Models\\User.cs": {
+      "noted_database.Models.User": {
+        "System.Int32 noted_database.Models.User::get_UserId()": {
+          "Lines": {
+            "8": 19
+          },
+          "Branches": []
+        },
+        "System.String noted_database.Models.User::get_Email()": {
+          "Lines": {
+            "11": 5
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Hubs\\NotificationHub.cs": {
+      "noted_database.Hubs.NotificationHub/<SendMessage>d__0": {
+        "System.Void noted_database.Hubs.NotificationHub/<SendMessage>d__0::MoveNext()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Data\\ApplicationDbContext.cs": {
+      "noted_database.Data.ApplicationDbContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<noted_database.Models.User> noted_database.Data.ApplicationDbContext::get_Users()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<noted_database.Models.Campaign> noted_database.Data.ApplicationDbContext::get_Campaigns()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<noted_database.Models.Session> noted_database.Data.ApplicationDbContext::get_Sessions()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<noted_database.Models.Character> noted_database.Data.ApplicationDbContext::get_Characters()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<noted_database.Models.CampaignParticipant> noted_database.Data.ApplicationDbContext::get_CampaignParticipants()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void noted_database.Data.ApplicationDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Void noted_database.Data.ApplicationDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<noted_database.Data.ApplicationDbContext>)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Data\\Repositories\\CampaignRepository.cs": {
+      "noted_database.Data.Repositories.CampaignRepository": {
+        "System.Void noted_database.Data.Repositories.CampaignRepository::.ctor(noted_database.Data.ApplicationDbContext)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.CampaignRepository/<DeleteCampaign>d__6": {
+        "System.Void noted_database.Data.Repositories.CampaignRepository/<DeleteCampaign>d__6::MoveNext()": {
+          "Lines": {
+            "98": 0,
+            "100": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "110": 0,
+            "111": 0,
+            "113": 0,
+            "115": 0,
+            "116": 0,
+            "118": 0,
+            "119": 0,
+            "121": 0
+          },
+          "Branches": [
+            {
+              "Line": 104,
+              "Offset": 208,
+              "EndOffset": 210,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 104,
+              "Offset": 208,
+              "EndOffset": 218,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "noted_database.Data.Repositories.CampaignRepository/<GetCampaignById>d__3": {
+        "System.Void noted_database.Data.Repositories.CampaignRepository/<GetCampaignById>d__3::MoveNext()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.CampaignRepository/<GetCampaignsByParticipantId>d__2": {
+        "System.Void noted_database.Data.Repositories.CampaignRepository/<GetCampaignsByParticipantId>d__2::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.CampaignRepository/<InsertCampaign>d__4": {
+        "System.Void noted_database.Data.Repositories.CampaignRepository/<InsertCampaign>d__4::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "64": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.CampaignRepository/<UpdateCampaign>d__5": {
+        "System.Void noted_database.Data.Repositories.CampaignRepository/<UpdateCampaign>d__5::MoveNext()": {
+          "Lines": {
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "81": 0,
+            "83": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0
+          },
+          "Branches": [
+            {
+              "Line": 72,
+              "Offset": 344,
+              "EndOffset": 346,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 344,
+              "EndOffset": 354,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Data\\Repositories\\SessionRepository.cs": {
+      "noted_database.Data.Repositories.SessionRepository": {
+        "System.Void noted_database.Data.Repositories.SessionRepository::.ctor(noted_database.Data.ApplicationDbContext)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.SessionRepository/<DeleteSession>d__6": {
+        "System.Void noted_database.Data.Repositories.SessionRepository/<DeleteSession>d__6::MoveNext()": {
+          "Lines": {
+            "81": 0,
+            "83": 0,
+            "85": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "93": 0,
+            "94": 0,
+            "96": 0,
+            "98": 0,
+            "99": 0,
+            "101": 0,
+            "102": 0,
+            "104": 0
+          },
+          "Branches": [
+            {
+              "Line": 87,
+              "Offset": 208,
+              "EndOffset": 210,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 87,
+              "Offset": 208,
+              "EndOffset": 218,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "noted_database.Data.Repositories.SessionRepository/<GetSessionById>d__3": {
+        "System.Void noted_database.Data.Repositories.SessionRepository/<GetSessionById>d__3::MoveNext()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.SessionRepository/<GetSessionsByCampaignId>d__2": {
+        "System.Void noted_database.Data.Repositories.SessionRepository/<GetSessionsByCampaignId>d__2::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.SessionRepository/<InsertSession>d__4": {
+        "System.Void noted_database.Data.Repositories.SessionRepository/<InsertSession>d__4::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "47": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.SessionRepository/<UpdateSession>d__5": {
+        "System.Void noted_database.Data.Repositories.SessionRepository/<UpdateSession>d__5::MoveNext()": {
+          "Lines": {
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "66": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 344,
+              "EndOffset": 346,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 344,
+              "EndOffset": 354,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Data\\Repositories\\UserRepository.cs": {
+      "noted_database.Data.Repositories.UserRepository": {
+        "System.Void noted_database.Data.Repositories.UserRepository::.ctor(noted_database.Data.ApplicationDbContext)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.UserRepository/<AddUserAsync>d__3": {
+        "System.Void noted_database.Data.Repositories.UserRepository/<AddUserAsync>d__3::MoveNext()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Data.Repositories.UserRepository/<GetUserByEmail>d__2": {
+        "System.Void noted_database.Data.Repositories.UserRepository/<GetUserByEmail>d__2::MoveNext()": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Controllers\\CampaignController.cs": {
+      "noted_database.Controllers.CampaignController": {
+        "System.Void noted_database.Controllers.CampaignController::.ctor(noted_database.Services.CampaignService,noted_database.Services.UserService)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Controllers.CampaignController/<DeleteCampaign>d__7": {
+        "System.Void noted_database.Controllers.CampaignController/<DeleteCampaign>d__7::MoveNext()": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0
+          },
+          "Branches": [
+            {
+              "Line": 69,
+              "Offset": 154,
+              "EndOffset": 156,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 69,
+              "Offset": 154,
+              "EndOffset": 171,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "noted_database.Controllers.CampaignController/<GetCampaign>d__4": {
+        "System.Void noted_database.Controllers.CampaignController/<GetCampaign>d__4::MoveNext()": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 164,
+              "EndOffset": 181,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "noted_database.Controllers.CampaignController/<GetCampaigns>d__3": {
+        "System.Void noted_database.Controllers.CampaignController/<GetCampaigns>d__3::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Controllers.CampaignController/<InsertCampaign>d__5": {
+        "System.Void noted_database.Controllers.CampaignController/<InsertCampaign>d__5::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 175,
+              "EndOffset": 180,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 175,
+              "EndOffset": 317,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "noted_database.Controllers.CampaignController/<UpdateCampaign>d__6": {
+        "System.Void noted_database.Controllers.CampaignController/<UpdateCampaign>d__6::MoveNext()": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0
+          },
+          "Branches": [
+            {
+              "Line": 57,
+              "Offset": 175,
+              "EndOffset": 177,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 175,
+              "EndOffset": 291,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\Huijb\\OneDrive\\Bureaublad\\Fontys\\Semester 3\\Individual Project\\Noted\\noted-database\\noted-database\\Controllers\\SessionController.cs": {
+      "noted_database.Controllers.SessionController": {
+        "System.Void noted_database.Controllers.SessionController::.ctor(noted_database.Services.SessionService,noted_database.Services.CampaignService)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Controllers.SessionController/<DeleteSession>d__7": {
+        "System.Void noted_database.Controllers.SessionController/<DeleteSession>d__7::MoveNext()": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0
+          },
+          "Branches": [
+            {
+              "Line": 64,
+              "Offset": 154,
+              "EndOffset": 156,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 154,
+              "EndOffset": 171,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "noted_database.Controllers.SessionController/<GetSession>d__4": {
+        "System.Void noted_database.Controllers.SessionController/<GetSession>d__4::MoveNext()": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 164,
+              "EndOffset": 181,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "noted_database.Controllers.SessionController/<GetSessions>d__3": {
+        "System.Void noted_database.Controllers.SessionController/<GetSessions>d__3::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Controllers.SessionController/<InsertSession>d__5": {
+        "System.Void noted_database.Controllers.SessionController/<InsertSession>d__5::MoveNext()": {
+          "Lines": {
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": []
+        }
+      },
+      "noted_database.Controllers.SessionController/<UpdateSession>d__6": {
+        "System.Void noted_database.Controllers.SessionController/<UpdateSession>d__6::MoveNext()": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": [
+            {
+              "Line": 52,
+              "Offset": 175,
+              "EndOffset": 177,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 175,
+              "EndOffset": 291,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

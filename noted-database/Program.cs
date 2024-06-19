@@ -27,11 +27,11 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<UserRepository>();
-builder.Services.AddScoped<CampaignService>();
-builder.Services.AddScoped<CampaignRepository>();
+builder.Services.AddScoped<IUserRepository,UserRepository>();
+builder.Services.AddScoped<ICampaignService, CampaignService>();
+builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
 builder.Services.AddScoped<SessionService>();
-builder.Services.AddScoped<SessionRepository>();
+builder.Services.AddScoped<ISessionRepository, SessionRepository>();
 builder.Services.AddSignalR();
 
 var configuration = new ConfigurationBuilder()

@@ -1,13 +1,12 @@
-using noted_database.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http.HttpResults;
-using System.Net;
-using System.Diagnostics;
+using noted_database.Models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace noted_database.Data.Repositories
 {
-    public class SessionRepository
+    public class SessionRepository : ISessionRepository
     {
         private readonly ApplicationDbContext _dbContext;
 
@@ -21,32 +20,28 @@ namespace noted_database.Data.Repositories
             return await _dbContext.Sessions
                 .Where(s => s.CampaignId == campaignId)
                 .ToListAsync();
-
-          
         }
 
-         public async Task<Session> GetSessionById(int id)
+        public async Task<Session> GetSessionById(int id)
         {
             return await _dbContext.Sessions.FirstOrDefaultAsync(s => s.SessionId == id);
         }
-      
+
         public async Task<bool> InsertSession(Session session)
-        {      
-                try
-                {
-                    _dbContext.Sessions.Add(session);
-                    await _dbContext.SaveChangesAsync();
-                             
-                    return true;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
-            
+        {
+            try
+            {
+                _dbContext.Sessions.Add(session);
+                await _dbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-       public async Task<bool> UpdateSession(Session session)
+        public async Task<bool> UpdateSession(Session session)
         {
             try
             {
@@ -54,26 +49,25 @@ namespace noted_database.Data.Repositories
 
                 if (existingSession == null)
                 {
-                    return false; 
+                    return false;
                 }
 
-                
                 existingSession.Title = session.Title;
                 existingSession.Summary = session.Summary;
 
                 await _dbContext.SaveChangesAsync();
-                
-                return true; 
+
+                return true;
             }
             catch (DbUpdateException ex)
             {
                 Console.WriteLine("Database update error: " + ex.Message);
-                return false; 
+                return false;
             }
             catch (Exception ex)
             {
                 Console.WriteLine("An unexpected error occurred: " + ex.Message);
-                return false; 
+                return false;
             }
         }
 
@@ -81,27 +75,23 @@ namespace noted_database.Data.Repositories
         {
             try
             {
-                
                 var existingSession = await _dbContext.Sessions.FindAsync(id);
 
                 if (existingSession == null)
                 {
-                    return false; 
+                    return false;
                 }
 
-              
                 _dbContext.Sessions.Remove(existingSession);
                 await _dbContext.SaveChangesAsync();
 
-                return true; 
+                return true;
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine("An error occurred while deleting the session: " + ex.Message);
-                return false; 
+                return false;
             }
         }
-
     }
 }
