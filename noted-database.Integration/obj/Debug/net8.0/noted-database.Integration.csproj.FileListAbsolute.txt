@@ -434,3 +434,4 @@ C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\no
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\obj\Debug\net8.0\noted-database.Integration.pdb
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\obj\Debug\net8.0\noted-database.Integration.genruntimeconfig.cache
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\obj\Debug\net8.0\ref\noted-database.Integration.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll

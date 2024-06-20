@@ -4,10 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using noted_database.Data;
 using noted_database.Models;
 using noted_database.Services;
+using Microsoft.AspNetCore.Authorization;
 namespace noted_database.Controllers{
 
-    [ApiController]
     [Route("campaigns")]
+    [Authorize]
+    [ApiController]
     public class CampaignController : ControllerBase
     {
         private readonly ICampaignService _campaignService;
@@ -25,7 +27,7 @@ namespace noted_database.Controllers{
             var campaigns = await _campaignService.GetCampaignsByEmail(email);
             return Ok(new { Campaigns = campaigns });
         }
-
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCampaign(int id)
         {
