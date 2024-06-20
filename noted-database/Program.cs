@@ -10,55 +10,61 @@ using noted_database.Services;
 using noted_database.Hubs;
 
 
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddCors(options =>
+public class Program
 {
-    options.AddDefaultPolicy(
-        builder =>
+    private static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddControllers();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
+        builder.Services.AddCors(options =>
         {
-            builder.AllowAnyOrigin()
-                                .AllowAnyHeader()
-                                .AllowAnyMethod();
+            options.AddDefaultPolicy(
+                builder =>
+                {
+                    builder.AllowAnyOrigin()
+                                        .AllowAnyHeader()
+                                        .AllowAnyMethod();
+                });
         });
-});
 
-builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<IUserRepository,UserRepository>();
-builder.Services.AddScoped<ICampaignService, CampaignService>();
-builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
-builder.Services.AddScoped<SessionService>();
-builder.Services.AddScoped<ISessionRepository, SessionRepository>();
-builder.Services.AddSignalR();
+        builder.Services.AddScoped<UserService>();
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
+        builder.Services.AddScoped<ICampaignService, CampaignService>();
+        builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
+        builder.Services.AddScoped<SessionService>();
+        builder.Services.AddScoped<ISessionRepository, SessionRepository>();
+        builder.Services.AddSignalR();
 
-var configuration = new ConfigurationBuilder()
-    .SetBasePath(builder.Environment.ContentRootPath)
-    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-    .AddEnvironmentVariables()
-    .Build();
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(builder.Environment.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+            .AddEnvironmentVariables()
+            .Build();
 
-var connectionString = configuration.GetConnectionString("DbContext");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+        var connectionString = configuration.GetConnectionString("DbContext");
+        builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 
-var app = builder.Build();
+        var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+        app.UseCors(x => x
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                  .SetIsOriginAllowed(origin => true)
+                  .AllowCredentials());
+        app.MapHub<NotificationHub>("/NotificationHub");
+        app.UseAuthorization();
+        app.MapControllers();
+
+        app.Run();
+    }
 }
- app.UseCors(x => x
-           .AllowAnyMethod()
-           .AllowAnyHeader()
-           .SetIsOriginAllowed(origin => true)
-           .AllowCredentials());
-app.MapHub<NotificationHub>("/NotificationHub");
-app.UseAuthorization();
-app.MapControllers();
-
-app.Run();

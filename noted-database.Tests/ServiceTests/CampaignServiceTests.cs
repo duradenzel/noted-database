@@ -61,7 +61,7 @@ namespace noted_database.Tests
             _mockCampaignRepository.Verify(repo => repo.GetCampaignsByParticipantId(user.UserId), Times.Once);
         }
 
-           [Fact]
+        [Fact]
         public async Task GetCampaignsByEmail_UserDoesNotExist_AddsUserAndReturnsEmptyList()
         {
             // Arrange
