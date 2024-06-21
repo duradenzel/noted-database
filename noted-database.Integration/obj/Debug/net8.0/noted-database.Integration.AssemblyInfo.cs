@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("noted-database.Integration")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fd3404667fb52fc4c7e3be1a42b2b36470116c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7642d6206d267dfbc66cfd3a1329d74b6e056f2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("noted-database.Integration")]
 [assembly: System.Reflection.AssemblyTitleAttribute("noted-database.Integration")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
