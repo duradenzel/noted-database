@@ -9,24 +9,32 @@ using noted_database.Data.Repositories;
 using noted_database.Services;
 using noted_database.Hubs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens; 
-using System.Security.Claims;
+using System.Text;
 
-        
 var builder = WebApplication.CreateBuilder(args);
-var domain = $"https://{builder.Configuration["Auth0:Domain"]}/";
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-.AddJwtBearer(options =>
-{
-    options.Authority = domain;
-    options.Audience = builder.Configuration["Auth0:Audience"];
-    options.TokenValidationParameters = new TokenValidationParameters
+    .AddJwtBearer(options =>
     {
-        NameClaimType = ClaimTypes.NameIdentifier
-    };
-});
+        options.Authority = "https://dev-z8i5zkg0.eu.auth0.com/";
+        options.Audience = "http://localhost:5173/";
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = "https://dev-z8i5zkg0.eu.auth0.com/",
+
+            ValidateAudience = true,
+            ValidAudience = "http://localhost:5173/",
+
+            ValidateLifetime = true,
+
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("<YOUR_AUTH0_SIGNING_KEY>")) // Replace with your Auth0 signing key
+        };
+    });
 builder.Services.AddAuthorization();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -67,11 +75,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseCors(x => x
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .SetIsOriginAllowed(origin => true)
-            .AllowCredentials());
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true)
+    .AllowCredentials());
+
 app.UseRouting();
 app.MapHub<NotificationHub>("/NotificationHub");
 
@@ -81,4 +91,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-

@@ -10,10 +10,12 @@ namespace noted_database.Data.Repositories
     public class CampaignRepository : ICampaignRepository
     {
         private readonly ApplicationDbContext _dbContext;
-
-        public CampaignRepository(ApplicationDbContext dbContext)
+        private readonly bool _isTestEnvironment;
+        public CampaignRepository(ApplicationDbContext dbContext, bool isTestEnvironment = false)
         {
             _dbContext = dbContext;
+            _isTestEnvironment = isTestEnvironment;
+
         }
 
         public async Task<List<Campaign>> GetCampaignsByParticipantId(int userId)
@@ -35,32 +37,49 @@ namespace noted_database.Data.Repositories
       
         public async Task<bool> InsertCampaign(Campaign campaign)
         {
-            using (var transaction = _dbContext.Database.BeginTransaction())
+            if (!_isTestEnvironment)
+        {
+            using var transaction = await _dbContext.Database.BeginTransactionAsync();
+            try
             {
-                try
+                _dbContext.Campaigns.Add(campaign);
+                await _dbContext.SaveChangesAsync();
+
+                var participant = new CampaignParticipant
                 {
-                    _dbContext.Campaigns.Add(campaign);
-                    await _dbContext.SaveChangesAsync();
+                    CampaignId = campaign.CampaignId,
+                    UserId = campaign.DmId,
+                    IsDm = true
+                };
+                _dbContext.CampaignParticipants.Add(participant);
+                await _dbContext.SaveChangesAsync();
 
-                    CampaignParticipant dmParticipant = new CampaignParticipant
-                    {
-                        CampaignId = campaign.CampaignId,
-                        UserId = campaign.DmId,
-                        IsDm = true
-                    };
-
-                    _dbContext.CampaignParticipants.Add(dmParticipant);
-                    await _dbContext.SaveChangesAsync();
-
-                    transaction.Commit();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    transaction.Rollback();
-                    return false;
-                }
+                await transaction.CommitAsync();
+                return true;
             }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
+        else
+        {
+           
+            _dbContext.Campaigns.Add(campaign);
+            await _dbContext.SaveChangesAsync();
+
+            var participant = new CampaignParticipant
+            {
+                CampaignId = campaign.CampaignId,
+                UserId = campaign.DmId,
+                IsDm = true
+            };
+            _dbContext.CampaignParticipants.Add(participant);
+            await _dbContext.SaveChangesAsync();
+
+            return true;
+        }
         }
 
        public async Task<bool> UpdateCampaign(Campaign campaign)

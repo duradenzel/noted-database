@@ -6,7 +6,6 @@ using noted_database.Models;
 using noted_database.Data.Repositories;
 using noted_database.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.InMemory;
 
 namespace noted_database.Integration.ControllerTests
 {
@@ -19,13 +18,12 @@ namespace noted_database.Integration.ControllerTests
         {
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                
                 .Options;
             _dbContext = new ApplicationDbContext(options);
             _dbContext.Database.EnsureDeleted();
             _dbContext.Database.EnsureCreated();
             PopulateFakeData();
-            _campaignRepository = new CampaignRepository(_dbContext);
+            _campaignRepository = new CampaignRepository(_dbContext, true);
         }
 
         public void PopulateFakeData()
@@ -88,6 +86,27 @@ namespace noted_database.Integration.ControllerTests
             Assert.NotNull(await _dbContext.CampaignParticipants.FirstOrDefaultAsync(cp => cp.CampaignId == 4 && cp.UserId == 4 && cp.IsDm));
         }
 
+    [Fact]
+    public async Task InsertCampaign_FailsForDuplicateId()
+    {
+        // Arrange
+        var newCampaign = new Campaign { CampaignId = 1, Title = "Duplicate Campaign", Description = "Duplicate Description", MaxPlayers = 5, DmId = 5 };
+
+        // Act
+        bool result;
+        try
+        {
+            result = await _campaignRepository.InsertCampaign(newCampaign);
+        }
+        catch (InvalidOperationException)
+        {
+            result = false;
+        }
+        // Assert
+        Assert.Equal(3, _dbContext.Campaigns.Count()); 
+    }
+
+
         [Fact]
         public async Task UpdateCampaign_UpdatesExistingCampaign()
         {
@@ -106,6 +125,19 @@ namespace noted_database.Integration.ControllerTests
         }
 
         [Fact]
+        public async Task UpdateCampaign_FailsForNonExistingCampaign()
+        {
+            // Arrange
+            var updatedCampaign = new Campaign { CampaignId = 99, Title = "Non-existing Campaign", Description = "Non-existing Description", MaxPlayers = 8 };
+
+            // Act
+            var result = await _campaignRepository.UpdateCampaign(updatedCampaign);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
         public async Task DeleteCampaign_DeletesExistingCampaign()
         {
             // Act
@@ -115,6 +147,17 @@ namespace noted_database.Integration.ControllerTests
             Assert.True(result);
             Assert.Null(await _dbContext.Campaigns.FindAsync(1));
             Assert.Equal(2, _dbContext.Campaigns.Count());
+        }
+
+        [Fact]
+        public async Task DeleteCampaign_FailsForNonExistingCampaign()
+        {
+            // Act
+            var result = await _campaignRepository.DeleteCampaign(99);
+
+            // Assert
+            Assert.False(result); 
+            Assert.Equal(3, _dbContext.Campaigns.Count());
         }
 
         public void Dispose()

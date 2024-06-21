@@ -28,7 +28,6 @@ C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\no
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.Core.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
-C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authorization.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authorization.Policy.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Components.dll
@@ -66,7 +65,6 @@ C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\no
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Identity.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Localization.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Localization.Routing.dll
-C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Metadata.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Mvc.Core.dll
@@ -435,3 +433,16 @@ C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\no
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\obj\Debug\net8.0\noted-database.Integration.genruntimeconfig.cache
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\obj\Debug\net8.0\ref\noted-database.Integration.dll
 C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Huijb\OneDrive\Bureaublad\Fontys\Semester 3\Individual Project\Noted\noted-database\noted-database.Integration\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
