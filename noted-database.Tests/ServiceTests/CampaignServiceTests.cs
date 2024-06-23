@@ -45,9 +45,7 @@ namespace noted_database.Tests
             var email = "testurer@gmail.com";
             var user = new User { UserId = 1, Email = email };
             var campaigns = new List<Campaign> { new Campaign { CampaignId = 1, Title = "Test Campaign", Description="Test Description", MaxPlayers= 1, DmId=user.UserId } };
-            //Get user by email
             _mockUserRepository.Setup(repo => repo.GetUserByEmail(email)).ReturnsAsync(user);
-            //Get user campaigns by user id
             _mockCampaignRepository.Setup(repo => repo.GetCampaignsByParticipantId(user.UserId)).ReturnsAsync(campaigns);
 
             // Act
@@ -55,9 +53,7 @@ namespace noted_database.Tests
 
             // Assert
             Assert.Equal(campaigns, result);
-            // Verify that GetUserByEmail was called once with correct email
             _mockUserRepository.Verify(repo => repo.GetUserByEmail(email), Times.Once);
-            // Verify that GetCampaignsByParticipantId was called once with the correct user id
             _mockCampaignRepository.Verify(repo => repo.GetCampaignsByParticipantId(user.UserId), Times.Once);
         }
 
@@ -66,13 +62,10 @@ namespace noted_database.Tests
         {
             // Arrange
             var email = "testurer@gmail.com";
-            User user = null; // User does not exist
+            User user = null; 
             var newUser = new User { UserId = 2, Email = email };
-            //Get user by email and expect it to return null
             _mockUserRepository.Setup(repo => repo.GetUserByEmail(email)).ReturnsAsync(user);
-            //Add the new user and verify it 
             _mockUserRepository.Setup(repo => repo.AddUserAsync(It.IsAny<User>())).Callback<User>(u => u.UserId = newUser.UserId).Returns(Task.CompletedTask);
-            //Create an empty Campaing list for the new user
             _mockCampaignRepository.Setup(repo => repo.GetCampaignsByParticipantId(newUser.UserId)).ReturnsAsync(new List<Campaign>());
 
             // Act
@@ -80,9 +73,7 @@ namespace noted_database.Tests
 
             // Assert
 
-            //Make sure to return an empty list when a user doesnt existss
             Assert.Empty(result);
-            // Verify that GetUserByEmail was called once with a good email
             _mockUserRepository.Verify(repo => repo.GetUserByEmail(email), Times.Once);
             _mockUserRepository.Verify(repo => repo.AddUserAsync(It.Is<User>(u => u.Email == email)), Times.Once);
             _mockCampaignRepository.Verify(repo => repo.GetCampaignsByParticipantId(newUser.UserId), Times.Never);
